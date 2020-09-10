@@ -1,0 +1,27 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract insurance{
+    string Name;
+    string addrs; 
+    int    units;
+    int    money;
+    string consumerId;
+    string month;
+    function insuranceBills(string newName, string newAddrs, int newUnits, int newMoney, string newConsumerId, 
+    string newMonth) public {
+        
+        Name = newName;
+        addrs = newAddrs;
+        units = newUnits;
+        money = newMoney;
+        month = newMonth;
+        consumerId = newConsumerId;
+    }
+    function getinsuranceBill() public view returns(string,string,int,int,string, string) {
+        return(Name, addrs, units, money, consumerId, month);
+    }
+    function setinsuranceBill(string newMonth, int newUnits, int newMoney) public{
+        month = newMonth;
+        units = newUnits;
+        money = newMoney;
+    }
+}
