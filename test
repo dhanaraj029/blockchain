@@ -1,0 +1,25 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract trainticket{
+    string Name;
+    string toplace; 
+    int    trainnum;
+    int    ticketid;
+    int    platformnum;
+    function trainticket(string newName, string newtoplace, int newtrainnum, int newticketid, int newplatformnum, ) 
+    public {
+        
+        Name = newName;
+        toplace = newtoplace;
+        trainnum = newtrainnum;
+        ticketid = newticketid;
+        platformnum= newplatformnum;
+    }
+    function gettrainticket() public view returns(string,string,int,int,int, int) {
+        return(Name, toplace, trainnum, ticketid, platformnum);
+    }
+    function settrainticket(string newMonth, int newUnits, int newMoney) public{
+        month = newMonth;
+        units = newUnits;
+        money = newMoney;
+    }
+}
